@@ -3,123 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LLM & Transformer Ecosystem</title>
+  <title>Your Name - US College Application Portfolio</title>
   <style>
     body {
-      font-family: "Segoe UI", Roboto, sans-serif;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #222;
       margin: 0;
-      background: #f8f9fb;
-      color: #333;
-      text-align: center;
+      padding: 0;
     }
     header {
-      background: linear-gradient(135deg, #0052cc, #6a11cb);
+      background-color: #1a4db3;
       color: white;
-      padding: 50px 20px;
+      text-align: center;
+      padding: 2em 1em;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      font-size: 1.1em;
-      opacity: 0.9;
+      margin: 0.2em 0;
     }
     main {
-      max-width: 960px;
+      max-width: 900px;
       margin: 40px auto;
-      padding: 20px;
-      background: white;
+      padding: 0 20px;
+    }
+    section {
+      background-color: #fff;
       border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      padding: 20px;
     }
-    h2 {
-      color: #6a11cb;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
+    section h2 {
+      border-bottom: 2px solid #1a4db3;
+      padding-bottom: 8px;
     }
-    svg {
+    .photo {
+      text-align: center;
+    }
+    .photo img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .video {
+      text-align: center;
+    }
+    iframe, video {
       width: 100%;
-      height: 400px;
-      margin-top: 20px;
+      max-width: 720px;
+      height: 405px;
+      border-radius: 10px;
+      border: none;
     }
-    .node {
-      fill: #6a11cb;
-      stroke: #fff;
-      stroke-width: 2px;
+    .resume {
+      text-align: center;
     }
-    .text {
-      font-size: 14px;
-      fill: #333;
+    .resume iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    a.download {
+      display: inline-block;
+      background-color: #1a4db3;
+      color: white;
+      padding: 10px 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 10px;
     }
     footer {
-      color: #777;
-      margin: 30px 0;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      padding: 20px 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>LLM & Transformer Ecosystem</h1>
-    <p>How Large Language Models emerge from mathematical principles and Transformer architecture</p>
+    <h1>Your Name</h1>
+    <p>Prospective Undergraduate Applicant — Class of 2029</p>
   </header>
 
   <main>
-    <section id="diagram">
-      <h2>Conceptual Ecosystem Diagram</h2>
-      <svg viewBox="0 0 800 400">
-        <!-- Math Layer -->
-        <circle class="node" cx="100" cy="200" r="50" fill="#ffffff"></circle>
-        <text class="text" x="100" y="205" text-anchor="middle">Mathematics</text>
-
-        <!-- Transformer Layer -->
-        <circle class="node" cx="350" cy="200" r="60" fill="#ffffff"></circle>
-        <text class="text" x="350" y="205" text-anchor="middle">Transformer</text>
-
-        <!-- LLM Layer -->
-        <circle class="node" cx="600" cy="200" r="70" fill="#ffffff"></circle>
-        <text class="text" x="600" y="205" text-anchor="middle">LLM</text>
-
-        <!-- Arrows -->
-        <line x1="150" y1="200" x2="290" y2="200" stroke="#444" stroke-width="2" marker-end="url(#arrow)" />
-        <line x1="410" y1="200" x2="530" y2="200" stroke="#444" stroke-width="2" marker-end="url(#arrow)" />
-
-        <defs>
-          <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto" markerUnits="strokeWidth">
-            <path d="M0,0 L0,6 L9,3 z" fill="#444" />
-          </marker>
-        </defs>
-      </svg>
-      <p style="color:#555; font-size: 0.9em;">
-        Mathematics provides the foundation → Transformer defines the architecture → LLMs scale and specialize it.
-      </p>
+    <section class="photo">
+      <h2>My Photo</h2>
+      <!-- Replace photo.jpg with your actual image -->
+      <img src="photo.jpg" alt="Your portrait">
     </section>
 
-    <section id="math">
-      <h2>Mathematical Foundations</h2>
-      <p>
-        The <strong>Transformer</strong> model is fundamentally built on <em>linear algebra</em> and <em>calculus</em>.
-        Each layer performs matrix multiplications (<code>Q × Kᵀ</code>, <code>Softmax</code>, <code>Value projections</code>)
-        representing <strong>linear transformations</strong> in high-dimensional vector space.
-      </p>
-      <p>
-        Attention mechanisms compute similarity using <strong>dot products</strong>, while backpropagation and gradient descent
-        rely on <strong>differentiation and optimization</strong>. Thus, math isn’t just background — it defines how LLMs learn meaning.
-      </p>
+    <section class="video">
+      <h2>Introduction Video</h2>
+      <!-- Option A: YouTube embed -->
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Introduction Video" allowfullscreen></iframe>
+
+      <!-- Option B: Local file -->
+      <!-- <video controls>
+        <source src="intro.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video> -->
     </section>
 
-    <section id="transformer">
-      <h2>Transformer → LLM Evolution</h2>
-      <ul style="text-align:left; display:inline-block;">
-        <li><strong>2017:</strong> Transformer introduced (“Attention Is All You Need”)</li>
-        <li><strong>2018–2020:</strong> BERT, GPT-2 scale up the architecture</li>
-        <li><strong>2021–2025:</strong> GPT-3, GPT-4, Gemini, Claude, DeepSeek — LLM ecosystem matures</li>
-      </ul>
+    <section class="resume">
+      <h2>Resume</h2>
+      <!-- Replace resume.pdf with your actual resume -->
+      <iframe src="resume.pdf"></iframe>
+      <br>
+      <a class="download" href="resume.pdf" download>Download Resume (PDF)</a>
     </section>
   </main>
 
   <footer>
-    © 2025 LLM Ecosystem Visualization | Built with HTML, CSS, and Math ❤️
+    <p>© 2025 Your Name | Built for US College Application</p>
   </footer>
 </body>
 </html>

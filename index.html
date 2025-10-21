@@ -3,108 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ying Jiang | Brown University Applicant</title>
+  <title>LLM & Transformer Ecosystem</title>
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, sans-serif;
+      font-family: "Segoe UI", Roboto, sans-serif;
       margin: 0;
-      background: #fafafa;
+      background: #f8f9fb;
       color: #333;
+      text-align: center;
     }
     header {
-      background-color: #4B2E83; /* Brown University's purple tone */
+      background: linear-gradient(135deg, #0052cc, #6a11cb);
       color: white;
-      text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 15px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.1em;
+      opacity: 0.9;
     }
     main {
-      max-width: 800px;
+      max-width: 960px;
       margin: 40px auto;
       padding: 20px;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #4B2E83;
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    video, iframe {
-      width: 100%;
       border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
-    .contact a {
-      color: #4B2E83;
-      text-decoration: none;
+    h2 {
+      color: #6a11cb;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
     }
-    .contact a:hover {
-      text-decoration: underline;
+    svg {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+    }
+    .node {
+      fill: #6a11cb;
+      stroke: #fff;
+      stroke-width: 2px;
+    }
+    .text {
+      font-size: 14px;
+      fill: #333;
+    }
+    footer {
+      color: #777;
+      margin: 30px 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="your-photo.jpg" alt="Your Photo">
-    <h1>Ying Jiang</h1>
-    <p>Applicant for Computer Science & Artificial Intelligence | Brown University</p>
+    <h1>LLM & Transformer Ecosystem</h1>
+    <p>How Large Language Models emerge from mathematical principles and Transformer architecture</p>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hello! I’m Ying Jiang, a high school student passionate about computer science, 
-        artificial intelligence, and creative problem-solving. I love exploring how technology 
-        can intersect with art and human expression — something I believe aligns with 
-        Brown University’s spirit of open inquiry and interdisciplinary learning.
+    <section id="diagram">
+      <h2>Conceptual Ecosystem Diagram</h2>
+      <svg viewBox="0 0 800 400">
+        <!-- Math Layer -->
+        <circle class="node" cx="100" cy="200" r="50"></circle>
+        <text class="text" x="100" y="205" text-anchor="middle">Mathematics</text>
+
+        <!-- Transformer Layer -->
+        <circle class="node" cx="350" cy="200" r="60" fill="#2575fc"></circle>
+        <text class="text" x="350" y="205" text-anchor="middle">Transformer</text>
+
+        <!-- LLM Layer -->
+        <circle class="node" cx="600" cy="200" r="70" fill="#00c896"></circle>
+        <text class="text" x="600" y="205" text-anchor="middle">LLM</text>
+
+        <!-- Arrows -->
+        <line x1="150" y1="200" x2="290" y2="200" stroke="#444" stroke-width="2" marker-end="url(#arrow)" />
+        <line x1="410" y1="200" x2="530" y2="200" stroke="#444" stroke-width="2" marker-end="url(#arrow)" />
+
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L0,6 L9,3 z" fill="#444" />
+          </marker>
+        </defs>
+      </svg>
+      <p style="color:#555; font-size: 0.9em;">
+        Mathematics provides the foundation → Transformer defines the architecture → LLMs scale and specialize it.
       </p>
     </section>
 
-    <section id="projects">
-      <h2>Highlights & Projects</h2>
+    <section id="math">
+      <h2>Mathematical Foundations</h2>
       <p>
-        My recent work includes an Arduino-based interactive art project, and participation in 
-        the Harvard Model United Nations, where I represented Talleyrand and developed skills 
-        in diplomacy and strategic negotiation.
+        The <strong>Transformer</strong> model is fundamentally built on <em>linear algebra</em> and <em>calculus</em>.
+        Each layer performs matrix multiplications (<code>Q × Kᵀ</code>, <code>Softmax</code>, <code>Value projections</code>)
+        representing <strong>linear transformations</strong> in high-dimensional vector space.
+      </p>
+      <p>
+        Attention mechanisms compute similarity using <strong>dot products</strong>, while backpropagation and gradient descent
+        rely on <strong>differentiation and optimization</strong>. Thus, math isn’t just background — it defines how LLMs learn meaning.
       </p>
     </section>
 
-    <section id="video">
-      <h2>Video Introduction</h2>
-      <!-- Option 1: Upload to YouTube and replace the link below -->
-      <iframe 
-        src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-        title="Intro Video" 
-        frameborder="0" 
-        allowfullscreen>
-      </iframe>
-      <!-- Option 2: If you have a local video, use:
-      <video controls>
-        <source src="your-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      -->
-    </section>
-
-    <section class="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourname">linkedin.com/in/yourname</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+    <section id="transformer">
+      <h2>Transformer → LLM Evolution</h2>
+      <ul style="text-align:left; display:inline-block;">
+        <li><strong>2017:</strong> Transformer introduced (“Attention Is All You Need”)</li>
+        <li><strong>2018–2020:</strong> BERT, GPT-2 scale up the architecture</li>
+        <li><strong>2021–2025:</strong> GPT-3, GPT-4, Gemini, Claude, DeepSeek — LLM ecosystem matures</li>
+      </ul>
     </section>
   </main>
 
-  <footer style="text-align:center; color:#777; margin:30px;">
-    © 2025 Ying Jiang | Designed for Brown University Application
+  <footer>
+    © 2025 LLM Ecosystem Visualization | Built with HTML, CSS, and Math ❤️
   </footer>
 </body>
 </html>

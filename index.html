@@ -1,68 +1,156 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qicheng Li - US College Application Portfolio</title>
   <style>
+    /* 基础样式设置 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
     body {
       font-family: 'Helvetica Neue', Arial, sans-serif;
       background-color: #f7f9fc;
       color: #222;
-      margin: 0;
-      padding: 0;
+      line-height: 1.6;
     }
+    
+    /* 头部样式 */
     header {
       background-color: #1a4db3;
       color: white;
       text-align: center;
-      padding: 2em 1em;
+      padding: 3em 1em;
+      position: relative;
+      overflow: hidden;
     }
+    
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #3498db, #1a4db3);
+    }
+    
     header h1 {
       margin: 0.2em 0;
+      font-size: 2.5rem;
     }
+    
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    
+    /* 主内容区样式 */
     main {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
+    
     section {
       background-color: #fff;
       border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
       margin-bottom: 30px;
-      padding: 20px;
+      padding: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+    
     section h2 {
       border-bottom: 2px solid #1a4db3;
-      padding-bottom: 8px;
-    }
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #1a4db3;
+      text-align: center; /* 标题居中 */
+	}
+    
+    /* 照片区域样式 */
     .photo {
       text-align: center;
     }
+    
     .photo img {
       width: 200px;
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      border: 5px solid white;
+      transition: transform 0.3s ease;
     }
+    
+    .photo img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* 视频区域样式 */
     .video {
       text-align: center;
     }
-    iframe, video {
+    
+    .video-container {
+      position: relative;
       width: 100%;
       max-width: 720px;
-      height: 405px;
+      margin: 0 auto;
       border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    iframe, video {
+      width: 100%;
+      height: 405px;
       border: none;
     }
-
+    
+    /* 响应式调整 */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      .video-container, iframe, video {
+        height: 300px;
+      }
+      
+      section {
+        padding: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .video-container, iframe, video {
+        height: 200px;
+      }
+      
+      .photo img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+        
+    /* 页脚样式 */
     footer {
       text-align: center;
       font-size: 0.9em;
       color: #666;
-      padding: 20px 0;
+      padding: 30px 20px;
+      margin-top: 40px;
+      border-top: 1px solid #e0e0e0;
     }
   </style>
 </head>
@@ -75,26 +163,38 @@
   <main>
     <section class="photo">
       <h2>My Photo</h2>
-      <!-- Replace photo.jpg with your actual image -->
-      < img src="photo.jpg" alt="Your portrait">
+      <!-- 请替换为您的实际照片 -->
+      < img src="photo.jpg" alt="Qicheng Li's portrait - a smiling student in academic attire">
     </section>
 
     <section class="video">
       <h2>Introduction Video</h2>
-      <!-- Option A: YouTube embed -->
-      <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Introduction Video" allowfullscreen></iframe> -->
+      <div class="video-container">
+        <!-- 选项A: YouTube嵌入 -->
+        <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Qicheng Li's introduction video" allowfullscreen></iframe> -->
 
-      <!-- Option B: Local file -->
-      <!-- <video controls> -->
-        <!-- <source src="intro.mp4" type="video/mp4"> -->
-        <iframe src="http://vd3.bdstatic.com/mda-rjuhgawbc24ih129/360p/h264/1761740427082549093/mda-rjuhgawbc24ih129.mp4" type="video/mp4" allowfullscreen></iframe>
-        <!-- Your browser does not support video playback. -->
-      </video>
+        <!-- 选项B: 本地文件 -->
+        <!-- <video controls>
+          <source src="intro.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video> -->
+        
+        <!-- 示例视频 - 实际使用时请替换为您自己的视频 -->
+        <iframe src="http://vd3.bdstatic.com/mda-rjuhgawbc24ih129/360p/h264/1761740427082549093/mda-rjuhgawbc24ih129.mp4" title="Qicheng Li's introduction video" allowfullscreen=""></iframe>
+      </div>
+    </section>
+
+    <!-- 可以添加更多部分，如个人陈述、成就、活动等 -->
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I am a dedicated student with a passion for learning and exploring new challenges. My academic interests include environmental science, computer science, mathematics and art. Outside of the classroom, I enjoy sports, reading and playing the piano.</p >
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Qicheng Li</p >
+    <p>© 2025 Qicheng Li | <a href=" " style="color: #1a4db3;">Contact Me</a ></p >
   </footer>
+
+
 </body>
 </html>
